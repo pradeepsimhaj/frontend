@@ -41,15 +41,15 @@ const Home = () => {
             {/* Toggle Button */}
             <button
               onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-              className="absolute left-0 top-1/2 -translate-x-full -translate-y-1/2 bg-[#1B3C53] text-white p-2 rounded-l-md hover:bg-gray-700 cursor-pointer transition-colors"
+              className="absolute left-0 top-1/2 -translate-x-full -translate-y-1/2 bg-[#0d8be6] text-white p-2 rounded-l-md hover:bg-gray-700 cursor-pointer transition-colors"
             >
               {isSidebarOpen === true ? <ArrowRight size={20} /> : <ArrowLeft size={20} />}
             </button>
 
             {/* Sidebar Content */}
-            <div className="flex-1 h-full flex flex-col mt-2">
+            <div className="flex-1 h-full flex flex-col mt-2 bg-[#0b2717]">
               {/* Sticky Pane Buttons */}
-              <div className="flex gap-2 p-3 bg-stone-200 rounded-md border-b sticky top-0 z-10">
+              <div className="flex gap-2 p-3 bg-[#745548] rounded-md border-b sticky top-0 z-10">
                 <button
                   onClick={() => setActivePane("nodes")}
                   className={`px-3 py-1.5 rounded ${

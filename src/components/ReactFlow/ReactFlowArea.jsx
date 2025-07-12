@@ -28,11 +28,6 @@ const defaultEdgeOptions = {
   },
 };
 
-export const BackgroundType = {
-  dots: "Dots",
-  lines: "Lines",
-  cross: "Cross",
-};
 
 const ReactFlowArea = () => {
   const reactFlowInstance = useReactFlow();
@@ -110,7 +105,7 @@ const ReactFlowArea = () => {
         id: `edge-${edges.length + 1}`,
         type: "smoothstep",
         animated: true,
-        style: { stroke: "#1B3C53" },
+        style: { stroke: "#fff", strokeWidth: 2 },
         markerEnd: {
           type: MarkerType.ArrowClosed,
           color: "#1B3C53",
@@ -178,25 +173,6 @@ const ReactFlowArea = () => {
     [deleteNode]
   );
 
-  // const BackgroundButtons = () => {
-  //   return (
-  //     <div className="flex gap-2">
-  //       {Object.entries(BackgroundType).map(([type, value]) => (
-  //         <button
-  //           key={type}
-  //           onClick={() =>
-  //             setSettings((prev) => ({ ...prev, backgroundType: type }))
-  //           }
-  //           className={`flex justify-center items-center ${
-  //             settings.backgroundType === type ? "bg-[#324B5A]" : "bg-[#1B3C53]"
-  //           } text-white rounded-md p-2`}
-  //         >
-  //           {value}
-  //         </button>
-  //       ))}
-  //     </div>
-  //   );
-  // };
 
   // Add event listeners for node movement tracking
   useEffect(() => {
@@ -219,7 +195,7 @@ const ReactFlowArea = () => {
   }, [setSelectedNode]);
 
   return (
-    <div className="w-full h-full text-black">
+    <div className="w-full h-full text-black bg-[#1B3C53] relative">
       <ReactFlow
         nodes={reactFlowNodes}
         edges={edges}
@@ -243,9 +219,6 @@ const ReactFlowArea = () => {
         className="transition-all duration-300 ease-in-out"
         onPaneClick={handlePaneClick}
       >
-        <Panel position="top-left">
-          {/* <BackgroundButtons /> */}
-        </Panel>
         <Background variant={settings.backgroundType} />
         {settings.showMiniMap && (
           <MiniMap

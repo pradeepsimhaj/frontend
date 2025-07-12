@@ -93,7 +93,7 @@ const SettingsPane = () => {
         <div className="flex bg-[#456882] text-gray-100 text-m border-b-2 border-[#1B3C53] justify-start items-center px-2 py-1 gap-1">
           <span className="font-semibold">Global Settings</span>
         </div>
-        <div className="p-3 bg-[#F9F3EF]">
+        <div className="p-3 bg-[#a44d13]">
           <div className="flex items-center gap-2">
             <input
               type="checkbox"
