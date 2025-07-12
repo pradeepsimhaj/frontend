@@ -2,3 +2,7 @@
 button{
     cursor: pointer;
 }
+
+.react-flow__attribution {
+  display: none !important;
+}
