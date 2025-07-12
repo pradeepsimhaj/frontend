@@ -1,8 +1,7 @@
-# Chatbot Flow Builder - Frontend
+# Bitspeed Chatbot Flow Builder - Frontend Task
 
 A modern React-based frontend application for building and managing chatbot conversation flows using a visual drag-and-drop interface.
 
-**Live Demo**: [https://chatbot-flow-builder-bite-speed.vercel.app/](https://chatbot-flow-builder-bite-speed.vercel.app/)
 
 ## 🚀 Features
 
